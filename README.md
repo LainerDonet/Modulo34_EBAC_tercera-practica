@@ -1,7 +1,6 @@
 
 
-```markdown
-# 🌦️ El Tiempo de tus Ciudades
+# 🌦️ Proyecto 34 EBAC El Tiempo de tus Ciudades
 
 Aplicación web desarrollada en **React** que muestra el **pronóstico del tiempo** de varias ciudades del mundo utilizando la API pública de **[OpenWeather](https://home.openweathermap.org/)**.  
 La aplicación cuenta con un listado inicial de 9 ciudades y la posibilidad de buscar cualquier ciudad del mundo para visualizar su información meteorológica actual y pronóstico a varios días.
