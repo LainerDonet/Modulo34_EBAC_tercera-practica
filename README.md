@@ -73,22 +73,21 @@ src/
 └── index.js
 
 ````
-
 ---
 
 ## 🚀 Instalación y ejecución
 
 1. **Clonar el repositorio**  
-   ```bash
-   git clone https://github.com/tuusuario/el-tiempo-ciudades.git
-   cd el-tiempo-ciudades
+```bash
+   git clone https://github.com/LainerDonet/Modulo34_EBAC_tercera-practica
+   cd Modulo34_EBAC_tercera-practica
 ````
 
 2. **Instalar dependencias**
 
-   ```bash
+```bash
    npm install
-   ```
+```
 
 3. **Configurar la API Key**
 
