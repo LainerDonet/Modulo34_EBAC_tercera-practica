@@ -1,70 +1,172 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+```markdown
+# 🌦️ El Tiempo de tus Ciudades
 
-In the project directory, you can run:
+Aplicación web desarrollada en **React** que muestra el **pronóstico del tiempo** de varias ciudades del mundo utilizando la API pública de **[OpenWeather](https://home.openweathermap.org/)**.  
+La aplicación cuenta con un listado inicial de 9 ciudades y la posibilidad de buscar cualquier ciudad del mundo para visualizar su información meteorológica actual y pronóstico a varios días.
 
-### `npm start`
+---
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## 📌 Características principales
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- **Listado de ciudades predeterminadas** con información meteorológica:
+  - Ciudad de México
+  - La Habana
+  - Miami
+  - New York
+  - Vancouver
+  - Madrid
+  - Londres
+  - Beijing
+  - Sidney
+- **Búsqueda de ciudades** por nombre mediante un campo de búsqueda.
+- **Pronóstico extendido** de varios días para cada ciudad.
+- **Información meteorológica detallada**:
+  - 🌡️ Temperatura
+  - ☁️ Cobertura Nubosa
+  - 💧 Humedad
+  - 🌬️ Velocidad del Viento
+- **Interfaz responsiva** para PC, Tablet y Teléfono.
+- **Gestión de estado global** con Redux Toolkit.
+- **Estilizado moderno** usando `styled-components`.
+- **Rutas dinámicas** con `react-router-dom`.
+- **Pruebas unitarias y de integración** con Jest.
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 🛠️ Tecnologías utilizadas
 
-### `npm run build`
+- **React 18+** (Componentes funcionales y Hooks)
+- **React Router DOM** (Rutas y navegación)
+- **Redux Toolkit** (Manejo de estado global)
+- **styled-components** (CSS-in-JS)
+- **Jest** (Pruebas)
+- **OpenWeather API** (Datos meteorológicos en tiempo real)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 📂 Estructura de componentes
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
 
-### `npm run eject`
+src/
+├── components/
+│   ├── Header.js
+│   ├── Search.js
+│   ├── Card.js
+│   ├── SearchResult.js
+│   └── Footer.js
+├── redux/
+│   ├── store.js
+│   ├── weatherSlice.js
+│   └── index.js
+├── services/
+│   └── weatherAPI.js
+├── utils/
+│   └── constants.js
+├── tests/
+│   ├── App.test.js
+│   ├── Header.test.js
+│   └── Card.test.js
+├── App.js
+├── App.css
+└── index.js
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+````
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## 🚀 Instalación y ejecución
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+1. **Clonar el repositorio**  
+   ```bash
+   git clone https://github.com/tuusuario/el-tiempo-ciudades.git
+   cd el-tiempo-ciudades
+````
 
-## Learn More
+2. **Instalar dependencias**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+   ```bash
+   npm install
+   ```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3. **Configurar la API Key**
 
-### Code Splitting
+   * Crea una cuenta en [OpenWeather](https://home.openweathermap.org/)
+   * Copia tu API Key y agrégala en un archivo `.env`:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+     ```
+     REACT_APP_OPENWEATHER_API_KEY=tu_api_key
+     ```
 
-### Analyzing the Bundle Size
+4. **Ejecutar en modo desarrollo**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+   ```bash
+   npm start
+   ```
 
-### Making a Progressive Web App
+5. **Construir versión de producción**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+   ```bash
+   npm run build
+   ```
 
-### Advanced Configuration
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## 🔀 Rutas principales
 
-### Deployment
+* `/` → Página principal con las 9 ciudades predeterminadas
+* `/ciudad/:nombre` → Detalle del clima y pronóstico de una ciudad
+* `/busqueda` → Resultados de búsqueda
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+---
 
-### `npm run build` fails to minify
+## 🧪 Pruebas con Jest
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+El proyecto incluye **tests unitarios y de integración** para garantizar su funcionamiento.
+
+Ejecutar las pruebas:
+
+```bash
+npm test
+```
+
+Ejemplos de pruebas:
+
+* Renderizado correcto de componentes (Header, Footer, Card).
+* Funcionamiento del buscador de ciudades.
+* Llamadas a la API y manejo de errores.
+* Navegación entre rutas.
+
+---
+
+## 📱 Diseño responsivo
+
+La interfaz está optimizada para:
+
+* 🖥️ Escritorio
+* 📱 Dispositivos móviles
+* 📟 Tablets
+
+Esto se logra gracias al uso de **styled-components** y diseño **flex/grid**.
+
+---
+
+## 📜 Licencia
+
+Este proyecto se distribuye bajo la licencia MIT.
+Puedes usarlo y modificarlo libremente para fines educativos o personales.
+
+---
+
+## 👨‍💻 Autor
+
+Desarrollado por Lainer Felipe Donet Vasconcellos como proyecto de práctica Frontend con React.
+
+```
+
+---
+
+Si quieres, puedo también prepararte **el esquema del Redux Toolkit** con los slices y thunks listos para que tu app consuma OpenWeather de forma óptima.
+```
