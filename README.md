@@ -162,9 +162,4 @@ Puedes usarlo y modificarlo libremente para fines educativos o personales.
 
 Desarrollado por Lainer Felipe Donet Vasconcellos como proyecto de práctica Frontend con React.
 
-```
 
----
-
-Si quieres, puedo también prepararte **el esquema del Redux Toolkit** con los slices y thunks listos para que tu app consuma OpenWeather de forma óptima.
-```
