@@ -7,16 +7,19 @@ import Search from './components/Search';
 import SearchResult from './components/SearchResult';
 import Footer from './components/Footer';
 import Card from './components/Card';
+import CityPage from './components/CityPage'; // <-- IMPORTADO
 import { fetchCitiesWeather, searchCityWeather } from './redux/weatherSlice';
 import { API_CONFIG } from './utils/constants';
+import { CITIES_INFO } from './data/citiesInfo'; // <-- IMPORTADO
 
 // Estilos globales
 const GlobalStyle = createGlobalStyle`
+
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+      }
 
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -63,7 +66,7 @@ const AppContainer = styled.div`
 const MainContainer = styled.main`
   flex: 1;
   padding: 2rem;
-  
+
   @media (max-width: ${props => props.theme.breakpoints.mobile}) {
     padding: 1rem;
   }
@@ -74,7 +77,7 @@ const CitiesGrid = styled.div`
   grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
   gap: 2rem;
   margin-top: 2rem;
-  
+
   @media (max-width: ${props => props.theme.breakpoints.mobile}) {
     grid-template-columns: 1fr;
     gap: 1.5rem;
@@ -144,6 +147,7 @@ const HomePage = () => {
               key={city}
               cityData={citiesData[city]}
               cityName={city}
+              cityId={CITIES_INFO[city]?.id} // <-- PROP AÑADIDA
             />
           ))}
         </CitiesGrid>
@@ -162,6 +166,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/search" element={<HomePage />} />
+            <Route path="/city/:cityId" element={<CityPage />} /> {/* <-- RUTA AÑADIDA */}
           </Routes>
         </MainContainer>
         <Footer />
