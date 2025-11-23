@@ -1,10 +1,10 @@
 {
   "files": {
-    "main.js": "/Modulo34_EBAC_tercera-practica/static/js/main.fe82fd51.js",
+    "main.js": "/Modulo34_EBAC_tercera-practica/static/js/main.032bb673.js",
     "index.html": "/Modulo34_EBAC_tercera-practica/index.html",
-    "main.fe82fd51.js.map": "/Modulo34_EBAC_tercera-practica/static/js/main.fe82fd51.js.map"
+    "main.032bb673.js.map": "/Modulo34_EBAC_tercera-practica/static/js/main.032bb673.js.map"
   },
   "entrypoints": [
-    "static/js/main.fe82fd51.js"
+    "static/js/main.032bb673.js"
   ]
 }
